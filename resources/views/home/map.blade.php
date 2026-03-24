@@ -183,7 +183,7 @@
                 <h2 class="mb-1" style="font-size: 22px; font-weight: 700; color: #212529;">
                     <i class="bi bi-map text-primary"></i> Bản đồ địa điểm
                 </h2>
-                <p class="text-muted mb-0" style="font-size: 14px;">Xã Võ Nhai, Huyện Võ Nhai, Tỉnh Thái Nguyên</p>
+                <p class="text-muted mb-0" style="font-size: 14px;">Xã Võ Nhai, Tỉnh Thái Nguyên</p>
             </div>
             <a href="{{ route('home') }}" class="btn btn-outline-primary btn-sm">
                 <i class="bi bi-grid"></i> Xem dạng danh sách

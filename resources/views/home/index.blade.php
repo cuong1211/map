@@ -501,7 +501,7 @@
             return [
                 'id' => $l->id,
                 'name' => $l->name,
-                'address' => $l->address ?: 'Xã Võ Nhai, Huyện Võ Nhai',
+                'address' => $l->address ?: 'Xã Võ Nhai',
                 'lat' => (float) $l->latitude,
                 'lng' => (float) $l->longitude,
                 'category' => $l->category,
@@ -561,7 +561,7 @@
                     </div>
                     <div class="loc-info">
                         <div class="loc-name">{{ $loc->name }}</div>
-                        <div class="loc-addr">{{ $loc->address ?: 'Xã Võ Nhai, Huyện Võ Nhai, Thái Nguyên' }}</div>
+                        <div class="loc-addr">{{ $loc->address ?: 'Xã Võ Nhai, Thái Nguyên' }}</div>
                         @if ($loc->category)
                             <div class="loc-category">{{ $icon }} {{ $loc->category }}</div>
                         @endif

@@ -386,7 +386,7 @@
                         </div>
                         <div class="footer-info-row">
                             <i class="bi bi-geo-alt"></i>
-                            <span>Xã Võ Nhai, Huyện Võ Nhai, Tỉnh Thái Nguyên</span>
+                            <span>Xã Võ Nhai, Tỉnh Thái Nguyên</span>
                         </div>
                         <div class="footer-info-row">
                             <i class="bi bi-telephone"></i>
