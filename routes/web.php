@@ -18,4 +18,5 @@ Route::post('/admin/logout', [Admin\AuthController::class, 'logout'])->name('adm
 Route::prefix('admin')->middleware('admin.auth')->group(function () {
     Route::get('/', fn() => redirect()->route('admin.locations.index'));
     Route::resource('locations', Admin\LocationController::class)->names('admin.locations');
+    Route::resource('categories', Admin\CategoryController::class)->names('admin.categories');
 });

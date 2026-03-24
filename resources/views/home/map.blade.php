@@ -183,7 +183,7 @@
                 <h2 class="mb-1" style="font-size: 22px; font-weight: 700; color: #212529;">
                     <i class="bi bi-map text-primary"></i> Bản đồ địa điểm
                 </h2>
-                <p class="text-muted mb-0" style="font-size: 14px;">Xã Ba Chẽ, Huyện Ba Chẽ, Tỉnh Quảng Ninh</p>
+                <p class="text-muted mb-0" style="font-size: 14px;">Xã Võ Nhai, Huyện Võ Nhai, Tỉnh Thái Nguyên</p>
             </div>
             <a href="{{ route('home') }}" class="btn btn-outline-primary btn-sm">
                 <i class="bi bi-grid"></i> Xem dạng danh sách
@@ -224,11 +224,8 @@
                         </label>
                         @php
                             $categoryColors = [
-                                'Hành chính' => '#1565C0',
-                                'Giáo dục' => '#2E7D32',
-                                'Y tế' => '#C62828',
-                                'Kinh doanh' => '#E65100',
-                                'Du lịch' => '#6A1B9A',
+                                'Trường học' => '#2E7D32',
+                                'Cơ quan'    => '#1565C0',
                             ];
                         @endphp
                         @foreach($categories as $cat)
@@ -247,12 +244,9 @@
                     <h6><i class="bi bi-bookmark"></i> Chú thích màu sắc</h6>
                     @php
                         $legendItems = [
-                            ['Hành chính', '#1565C0', '🏛️'],
-                            ['Giáo dục', '#2E7D32', '🎓'],
-                            ['Y tế', '#C62828', '🏥'],
-                            ['Kinh doanh', '#E65100', '🏪'],
-                            ['Du lịch', '#6A1B9A', '📸'],
-                            ['Khác', '#455A64', '📍'],
+                            ['Trường học', '#2E7D32', '🎓'],
+                            ['Cơ quan',    '#1565C0', '🏛️'],
+                            ['Khác',       '#455A64', '📍'],
                         ];
                     @endphp
                     @foreach($legendItems as [$label, $color, $emoji])
@@ -281,8 +275,8 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/WLcE=" crossorigin=""></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-    // Initialize map centered on Ba Che area
-    const map = L.map('map').setView([21.5200, 107.2000], 13);
+    // Initialize map centered on Vo Nhai area
+    const map = L.map('map').setView([21.75182118692702, 106.07343143637803], 13);
 
     // Tile layer (OpenStreetMap)
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Location;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -11,13 +12,15 @@ class LocationController extends Controller
 {
     public function index()
     {
-        $locations = Location::orderBy('created_at', 'desc')->paginate(15);
-        return view('admin.locations.index', compact('locations'));
+        $locations  = Location::orderBy('created_at', 'desc')->paginate(15);
+        $categories = Category::orderBy('sort_order')->orderBy('name')->get()->keyBy('name');
+        return view('admin.locations.index', compact('locations', 'categories'));
     }
 
     public function create()
     {
-        return view('admin.locations.form', ['location' => null]);
+        $categories = Category::orderBy('sort_order')->orderBy('name')->get();
+        return view('admin.locations.form', ['location' => null, 'categories' => $categories]);
     }
 
     public function store(Request $request)
@@ -52,7 +55,8 @@ class LocationController extends Controller
 
     public function edit(Location $location)
     {
-        return view('admin.locations.form', compact('location'));
+        $categories = Category::orderBy('sort_order')->orderBy('name')->get();
+        return view('admin.locations.form', compact('location', 'categories'));
     }
 
     public function update(Request $request, Location $location)

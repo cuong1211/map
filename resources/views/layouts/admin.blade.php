@@ -169,11 +169,14 @@
     </a>
 
     <div class="sidebar-section-title">Quản lý nội dung</div>
-    <a href="{{ route('admin.locations.index') }}" class="sidebar-link {{ request()->routeIs('admin.locations.*') ? 'active' : '' }}">
+    <a href="{{ route('admin.locations.index') }}" class="sidebar-link {{ request()->routeIs('admin.locations.index') || request()->routeIs('admin.locations.edit') ? 'active' : '' }}">
         <i class="bi bi-geo-alt"></i> Địa điểm
     </a>
     <a href="{{ route('admin.locations.create') }}" class="sidebar-link {{ request()->routeIs('admin.locations.create') ? 'active' : '' }}">
         <i class="bi bi-plus-circle"></i> Thêm địa điểm
+    </a>
+    <a href="{{ route('admin.categories.index') }}" class="sidebar-link {{ request()->routeIs('admin.categories.*') ? 'active' : '' }}">
+        <i class="bi bi-tags"></i> Danh mục
     </a>
 
     <div class="sidebar-section-title">Hệ thống</div>

@@ -99,8 +99,10 @@
             <label class="form-label small fw-bold text-muted mb-1">DANH MỤC</label>
             <select name="category" class="form-select form-select-sm">
                 <option value="">Tất cả danh mục</option>
-                @foreach(['Hành chính','Giáo dục','Y tế','Kinh doanh','Du lịch'] as $cat)
-                    <option value="{{ $cat }}" {{ request('category') == $cat ? 'selected' : '' }}>{{ $cat }}</option>
+                @foreach($categories as $cat)
+                    <option value="{{ $cat->name }}" {{ request('category') == $cat->name ? 'selected' : '' }}>
+                        {{ $cat->icon }} {{ $cat->name }}
+                    </option>
                 @endforeach
             </select>
         </div>
@@ -135,16 +137,9 @@
             <tbody>
                 @forelse($locations as $location)
                     @php
-                        $categoryColors = [
-                            'Hành chính' => '#1565C0',
-                            'Giáo dục' => '#2E7D32',
-                            'Y tế' => '#C62828',
-                            'Kinh doanh' => '#E65100',
-                            'Du lịch' => '#6A1B9A',
-                        ];
-                        $color = $categoryColors[$location->category] ?? '#455A64';
-                        $catIcons = ['Hành chính'=>'🏛️','Giáo dục'=>'🎓','Y tế'=>'🏥','Kinh doanh'=>'🏪','Du lịch'=>'📸'];
-                        $icon = $catIcons[$location->category] ?? '📍';
+                        $cat   = $categories[$location->category] ?? null;
+                        $color = $cat?->color ?? '#455A64';
+                        $icon  = $cat?->icon  ?? '📍';
                     @endphp
                     <tr>
                         <td>
@@ -183,11 +178,11 @@
                         </td>
                         <td>
                             @if($location->is_active)
-                                <span class="status-badge bg-success bg-opacity-15 text-success">
+                                <span class="status-badge bg-success bg-opacity-15 text-success text-white">
                                     <i class="bi bi-check-circle-fill"></i> Hiển thị
                                 </span>
                             @else
-                                <span class="status-badge bg-secondary bg-opacity-15 text-secondary">
+                                <span class="status-badge bg-secondary bg-opacity-15 text-secondary text-white ">
                                     <i class="bi bi-dash-circle"></i> Ẩn
                                 </span>
                             @endif

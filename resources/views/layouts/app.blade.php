@@ -279,16 +279,32 @@
 
         /* Tablet: ẩn col About, chỉ còn Contact + Map */
         @media (max-width: 991px) and (min-width: 768px) {
-            .site-footer { margin-top: 0; }
-            .footer-body { padding: 28px 0 20px; }
-            .footer-col-about { display: none; }
-            .footer-map-box { height: 140px; }
+            .site-footer {
+                margin-top: 0;
+            }
+
+            .footer-body {
+                padding: 28px 0 20px;
+            }
+
+            .footer-col-about {
+                display: none;
+            }
+
+            .footer-map-box {
+                height: 140px;
+            }
         }
 
         /* Mobile: stack dọc, tối giản */
         @media (max-width: 767px) {
-            .site-footer { margin-top: 0; }
-            .footer-body { padding: 22px 0 12px; }
+            .site-footer {
+                margin-top: 0;
+            }
+
+            .footer-body {
+                padding: 22px 0 12px;
+            }
 
             .footer-col-title {
                 font-size: 12px;
@@ -298,7 +314,9 @@
 
             /* Ẩn col About & Map trên mobile — chỉ giữ Contact */
             .footer-col-about,
-            .footer-col-map { display: none; }
+            .footer-col-map {
+                display: none;
+            }
 
             /* Contact: hiện dạng 2 cột nhỏ */
             .footer-info-row {
@@ -307,10 +325,19 @@
             }
 
             /* Music bar: ẩn label, chỉ marquee */
-            .footer-music { padding: 8px 0; font-size: 11px; }
-            .footer-music .label { display: none; }
+            .footer-music {
+                padding: 8px 0;
+                font-size: 11px;
+            }
 
-            .footer-bottom { padding: 10px 0; font-size: 11px; }
+            .footer-music .label {
+                display: none;
+            }
+
+            .footer-bottom {
+                padding: 10px 0;
+                font-size: 11px;
+            }
         }
     </style>
 </head>
@@ -325,12 +352,12 @@
                 <!-- Logo trái -->
                 <a href="{{ route('home') }}" class="logo-wrap">
                     <div class="logo-img-col">
-                        <img src="{{ asset('assets/icon/logo.png') }}" alt="Logo Ba Chẽ">
-                        <span class="logo-place">Xã Ba Chẽ</span>
+                        <img src="{{ asset('assets/icon/logo.png') }}" alt="Logo Võ Nhai">
+                        <span class="logo-place">Xã Võ Nhai</span>
                     </div>
                     <div class="logo-titles">
-                        <span class="logo-supt">Công trình Thanh niên số xã Ba Chẽ</span>
-                        <span class="logo-main">Bản đồ số xã Ba Chẽ</span>
+                        <span class="logo-supt">Công trình Thanh niên số xã Võ Nhai</span>
+                        <span class="logo-main">Bản đồ số xã Võ Nhai</span>
                     </div>
                 </a>
 
@@ -355,45 +382,37 @@
                     <!-- Col 1: Liên hệ — hiện tất cả breakpoints -->
                     <div class="col-12 col-md-3 col-lg-3">
                         <div class="footer-col-title">
-                            <i class="bi bi-geo-alt-fill me-1"></i>Xã Ba Chẽ
+                            <i class="bi bi-geo-alt-fill me-1"></i>Xã Võ Nhai
                         </div>
                         <div class="footer-info-row">
                             <i class="bi bi-geo-alt"></i>
-                            <span>Xã Ba Chẽ, Huyện Ba Chẽ, Tỉnh Quảng Ninh</span>
+                            <span>Xã Võ Nhai, Huyện Võ Nhai, Tỉnh Thái Nguyên</span>
                         </div>
                         <div class="footer-info-row">
                             <i class="bi bi-telephone"></i>
-                            <span>Điện thoại: (0203) xxx-xxxx</span>
+                            <span>Điện thoại: (0208) xxx-xxxx</span>
                         </div>
                         <div class="footer-info-row">
                             <i class="bi bi-envelope"></i>
-                            <span>ubnd.bache@quangninh.gov.vn</span>
+                            <span>doanxavonhai@gmail.com</span>
                         </div>
                         <div class="footer-info-row">
                             <i class="bi bi-headset"></i>
                             <span>Hotline: 1900 xxxx</span>
                         </div>
-                        <div class="d-flex gap-3 mt-3">
-                            <a href="{{ route('home') }}" style="font-size:12px;color:rgba(255,255,255,.5);text-decoration:none;">
-                                <i class="bi bi-house me-1"></i>Trang chủ
-                            </a>
-                            <a href="{{ route('map') }}" style="font-size:12px;color:rgba(255,255,255,.5);text-decoration:none;">
-                                <i class="bi bi-map me-1"></i>Bản đồ
-                            </a>
-                        </div>
                     </div>
 
                     <!-- Col 2: Giới thiệu — ẩn tablet/mobile -->
                     <div class="col-lg-5 footer-col-about">
-                        <div class="footer-col-title">Giới thiệu về Ba Chẽ</div>
+                        <div class="footer-col-title">Giới thiệu về Võ Nhai</div>
                         <p class="footer-about-text">
-                            Ba Chẽ là huyện miền núi phía Tây Bắc tỉnh Quảng Ninh, cách thành phố Hạ Long khoảng 80 km.
-                            Huyện có diện tích tự nhiên 1.232 km², địa hình chủ yếu là đồi núi với nhiều cánh rừng
-                            nguyên sinh phong phú, nơi sinh sống của nhiều dân tộc anh em như Kinh, Dao, Sán Chỉ, Tày...
+                            Xã Võ Nhai nằm ở phía Đông Bắc tỉnh Thái Nguyên, được thành lập trên cơ sở hợp nhất
+                            xã Lâu Thượng, xã Phú Thượng và thị trấn Đình Cả. Diện tích tự nhiên 99,78 km²,
+                            dân số trên 17.509 người thuộc nhiều dân tộc: Kinh, Nùng, Dao, Tày, Mông...
                         </p>
                         <p class="footer-about-text mb-0">
-                            Xã Ba Chẽ là trung tâm hành chính của huyện, tập trung các cơ quan, trường học, bệnh viện
-                            và các dịch vụ thiết yếu phục vụ đời sống nhân dân.
+                            Địa hình tương đối bằng phẳng dọc Quốc lộ 1B, có tài nguyên rừng phong phú với tỷ lệ
+                            che phủ trên 69%, thuận lợi cho phát triển nông, lâm nghiệp và du lịch sinh thái.
                         </p>
                     </div>
 
@@ -402,7 +421,7 @@
                         <div class="footer-col-title">Vị trí trên bản đồ</div>
                         <div class="footer-map-box">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59484.34!2d107.25!3d21.38!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a83d0a2635da9%3A0x96e59b5978e43e42!2zaMO0aSBCYSBDaMG-!5e0!3m2!1svi!2svn!4v1"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59484.34!2d105.97!3d21.74!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zVsO-IE5oYWk!5e0!3m2!1svi!2svn!4v1"
                                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                             </iframe>
                         </div>
@@ -412,20 +431,10 @@
             </div>
         </div>
 
-        <!-- Music bar -->
-        <div class="footer-music">
-            <div class="container d-flex align-items-center" style="overflow:hidden;">
-                <span class="label"><i class="bi bi-music-note-beamed me-1"></i>Âm nhạc địa phương</span>
-                <marquee scrollamount="3" style="flex:1;min-width:0;">
-                    ♫ Hát then – Đàn tính &nbsp;·&nbsp; ♫ Soóng cọ dân tộc Sán Chỉ &nbsp;·&nbsp; ♫ Dân ca người Dao &nbsp;·&nbsp; ♫ Hát ru miền núi Đông Bắc &nbsp;·&nbsp; ♫ Bài ca về Ba Chẽ
-                </marquee>
-            </div>
-        </div>
-
         <div class="footer-bottom">
             <div class="container">
-                <p class="mb-0">Bản quyền &copy; {{ date('Y') }} | Đoàn Thanh niên Cộng sản Hồ Chí Minh xã Ba Chẽ</p>
-                <p class="mb-0 mt-1">Người thực hiện: Phạm Tuấn Duy</p>
+                <p class="mb-0">Bản quyền &copy; {{ date('Y') }} | Đoàn Thanh niên Cộng sản Hồ Chí Minh xã Võ Nhai
+                </p>
             </div>
         </div>
     </footer>

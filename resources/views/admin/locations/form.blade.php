@@ -131,8 +131,10 @@
                         <label class="form-label fw-semibold">Danh mục</label>
                         <select name="category" class="form-select @error('category') is-invalid @enderror">
                             <option value="">-- Chọn danh mục --</option>
-                            @foreach(['Hành chính','Giáo dục','Y tế','Kinh doanh','Du lịch'] as $cat)
-                                <option value="{{ $cat }}" {{ old('category', $location?->category) == $cat ? 'selected' : '' }}>{{ $cat }}</option>
+                            @foreach($categories as $cat)
+                                <option value="{{ $cat->name }}" @selected(old('category', $location?->category) === $cat->name)>
+                                    {{ $cat->icon }} {{ $cat->name }}
+                                </option>
                             @endforeach
                         </select>
                         @error('category') <div class="invalid-feedback">{{ $message }}</div> @enderror
@@ -164,7 +166,7 @@
                                name="is_active"
                                value="1"
                                id="is_active"
-                               {{ old('is_active', $location ? ($location->is_active ? '1' : '') : '1') ? 'checked' : '' }}>
+                               @checked(old('is_active', $location ? $location->is_active : true))>
                         <label class="form-check-label fw-semibold" for="is_active">Hiển thị trên trang chủ</label>
                     </div>
                 </div>
@@ -299,7 +301,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Map Picker
     const defaultLat = {{ old('latitude', $location?->latitude ?? 21.520) }};
     const defaultLng = {{ old('longitude', $location?->longitude ?? 107.200) }};
-    const hasCoords = {{ ($location?->latitude && $location?->longitude) || old('latitude') ? 'true' : 'false' }};
+    const hasCoords = {{ $location?->latitude && $location?->longitude || old('latitude') ? 'true' : 'false' }};
 
     const map = L.map('picker-map').setView([defaultLat, defaultLng], hasCoords ? 15 : 13);
 
