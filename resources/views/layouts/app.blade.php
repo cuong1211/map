@@ -388,18 +388,12 @@
                             <i class="bi bi-geo-alt"></i>
                             <span>Xã Võ Nhai, Tỉnh Thái Nguyên</span>
                         </div>
-                        <div class="footer-info-row">
-                            <i class="bi bi-telephone"></i>
-                            <span>Điện thoại: (0208) xxx-xxxx</span>
-                        </div>
+                        
                         <div class="footer-info-row">
                             <i class="bi bi-envelope"></i>
                             <span>doanxavonhai@gmail.com</span>
                         </div>
-                        <div class="footer-info-row">
-                            <i class="bi bi-headset"></i>
-                            <span>Hotline: 1900 xxxx</span>
-                        </div>
+                        
                     </div>
 
                     <!-- Col 2: Giới thiệu — ẩn tablet/mobile -->
